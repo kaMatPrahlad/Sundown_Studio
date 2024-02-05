@@ -66,3 +66,13 @@ var loader = document.querySelector("#Loader");
 setTimeout(() => {
   loader.style.top = "-100%";
 }, 4000);
+
+var circle = document.querySelector(".circle");
+window.addEventListener("mousemove", function (dets) {
+  gsap.to(circle, {
+    x: dets.clientX,
+    y: dets.clientY,
+    duration: 0.3,
+    ease: Expo,
+  });
+});
